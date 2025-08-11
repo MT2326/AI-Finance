@@ -41,7 +41,7 @@ def analyze_with_gemini(df, prompt):
             return "Gemini API key not set in .streamlit/secrets.toml."
         genai.configure(api_key=api_key)
         csv_data = df.to_csv(index=False)
-        model = genai.GenerativeModel("gemini-1.5-pro")
+        model = genai.GenerativeModel("gemini-2.5-pro")
         full_prompt = f"""
         You are a financial analyst. Here is the financial data in CSV format:
 
